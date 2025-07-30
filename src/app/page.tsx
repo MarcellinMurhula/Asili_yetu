@@ -4,9 +4,8 @@ import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import Image from 'next/image';
 import { proverbs } from '@/data/content';
-import { ArrowRight, Bot, Quote } from 'lucide-react';
+import { ArrowRight, Bot, Quote, Leaf, Sparkles, PlusCircle } from 'lucide-react';
 
 export default function Home() {
   const [currentProverbIndex, setCurrentProverbIndex] = useState(0);
@@ -88,21 +87,27 @@ export default function Home() {
             </p>
           </div>
           <div className="relative grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-auto">
-             <div className="flex flex-col items-center space-y-2 p-4 rounded-lg transition-all hover:bg-primary/5">
-                <Image src="https://placehold.co/300x200.png" alt="Plante" width={300} height={200} className="rounded-lg object-cover" data-ai-hint="medicinal plant" />
+             <Link href="/plants" className="flex flex-col items-center space-y-2 p-4 rounded-lg transition-all hover:bg-primary/5 hover:shadow-lg group">
+                <div className="p-4 bg-primary/10 rounded-full transition-all group-hover:scale-110 group-hover:bg-primary/20">
+                    <Leaf className="h-10 w-10 text-primary" />
+                </div>
                 <h3 className="text-xl font-bold font-headline">Plantes Médicinales</h3>
                 <p className="text-sm text-muted-foreground">Un catalogue détaillé des plantes et de leurs usages thérapeutiques.</p>
-            </div>
-             <div className="flex flex-col items-center space-y-2 p-4 rounded-lg transition-all hover:bg-primary/5">
-                <Image src="https://placehold.co/300x200.png" alt="Astuce" width={300} height={200} className="rounded-lg object-cover" data-ai-hint="first aid"/>
+            </Link>
+             <Link href="/tips" className="flex flex-col items-center space-y-2 p-4 rounded-lg transition-all hover:bg-primary/5 hover:shadow-lg group">
+                <div className="p-4 bg-primary/10 rounded-full transition-all group-hover:scale-110 group-hover:bg-primary/20">
+                    <Sparkles className="h-10 w-10 text-primary" />
+                </div>
                 <h3 className="text-xl font-bold font-headline">Astuces d'Urgence</h3>
                 <p className="text-sm text-muted-foreground">Des conseils pratiques pour les situations courantes, basés sur le savoir local.</p>
-            </div>
-             <div className="flex flex-col items-center space-y-2 p-4 rounded-lg transition-all hover:bg-primary/5">
-                <Image src="https://placehold.co/300x200.png" alt="Chatbot" width={300} height={200} className="rounded-lg object-cover" data-ai-hint="chatbot illustration"/>
+            </Link>
+             <Link href="/chatbot" className="flex flex-col items-center space-y-2 p-4 rounded-lg transition-all hover:bg-primary/5 hover:shadow-lg group">
+                <div className="p-4 bg-primary/10 rounded-full transition-all group-hover:scale-110 group-hover:bg-primary/20">
+                    <Bot className="h-10 w-10 text-primary" />
+                </div>
                 <h3 className="text-xl font-bold font-headline">Assistant IA</h3>
                 <p className="text-sm text-muted-foreground">Obtenez des réponses rapides à vos questions urgentes grâce à notre chatbot.</p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
