@@ -86,7 +86,7 @@ export default function Home() {
               Notre mission est de préserver et de partager la connaissance des plantes médicinales qui ont soigné nos communautés depuis des siècles.
             </p>
           </div>
-          <div className="relative grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-auto">
+          <div className="relative grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3 mx-auto">
              <Link href="/plants" className="flex flex-col items-center space-y-2 p-4 rounded-lg transition-all hover:bg-primary/5 hover:shadow-lg group">
                 <div className="p-4 bg-primary/10 rounded-full transition-all group-hover:scale-110 group-hover:bg-primary/20">
                     <Leaf className="h-10 w-10 text-primary" />
