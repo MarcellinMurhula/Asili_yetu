@@ -26,7 +26,7 @@ export default function Home() {
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 text-center bg-primary/10 relative">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10"
-          style={{ backgroundImage: 'url(https://placehold.co/1920x1080.png)' }}
+          style={{ backgroundImage: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHVLqHtZJWyuz0Nvjzb3kDDMRXGIORF4O3Yw&s)' }}
           data-ai-hint="medicinal plants texture"
         ></div>
         <div className="container px-4 md:px-6 relative">
