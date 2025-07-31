@@ -46,14 +46,6 @@ export default function TipsPage() {
           <CarouselNext className="hidden sm:flex" />
         </Carousel>
       </div>
-      
-      <div className="mt-16 text-center text-muted-foreground p-4 border-t">
-          <h3 className="font-semibold text-foreground font-headline">Note pour l'intégration de contenu</h3>
-          <p className="max-w-3xl mx-auto text-sm">
-            Dans une application réelle, les astuces affichées ici pourraient être gérées via un système de gestion de contenu (CMS). Un administrateur pourrait téléverser un document PDF ou remplir un formulaire, et le contenu serait automatiquement extrait et affiché sur cette page, garantissant une mise à jour facile et rapide des informations.
-          </p>
-      </div>
-
     </div>
   );
 }
