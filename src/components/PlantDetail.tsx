@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import type { Plant } from '@/lib/types';
 import { Button } from './ui/button';
-import { Bot, Leaf, Loader2, Sparkles } from 'lucide-react';
+import { Bot, Leaf, Loader2, Sparkles, ArrowLeft } from 'lucide-react';
 import { summarizeMedicinalPlantInfo } from '@/ai/flows/summarize-medicinal-plant-info';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 
@@ -109,6 +110,16 @@ export function PlantDetail({ plant }: PlantDetailProps) {
             {summary && <p className="text-lg leading-relaxed">{summary}</p>}
           </CardContent>
         </Card>
+
+        <div className="mt-12 text-center">
+            <Button asChild variant="outline">
+                <Link href="/plants">
+                    <ArrowLeft className="mr-2 h-4 w-4" />
+                    Retour à la liste des plantes
+                </Link>
+            </Button>
+        </div>
+
       </div>
     </div>
   );
