@@ -39,7 +39,7 @@ export const plants: Plant[] = [
     slug: 'gingembre',
     name: 'Gingembre',
     scientificName: 'Zingiber officinale',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://www.alexetalex.com/ca/wp-content/uploads/2020/01/123044874_s.jpg',
     dataAiHint: 'ginger root',
     description: 'Un rhizome piquant et aromatique largement utilisé comme épice et pour ses puissantes propriétés anti-inflammatoires et digestives.',
     uses: ['Nausées', 'Maux de ventre', 'Toux et rhume', 'Douleurs articulaires'],
