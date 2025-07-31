@@ -6,11 +6,11 @@ export const plants: Plant[] = [
     slug: 'aloe-vera',
     name: 'Aloe Vera',
     scientificName: 'Aloe barbadensis miller',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmBbglfoxuwEdzDQB_Q8LIylpbV0SdNUXZcTXhxF_lktGwevLfN0V7Diw&usqp=CAE&s',
     dataAiHint: 'aloe vera',
     description:
       'L\'aloe vera est une plante succulente connue pour ses propriétés apaisantes et hydratantes. Son gel est largement utilisé en cosmétique et en médecine pour traiter les brûlures, les irritations cutanées et favoriser la cicatrisation.',
-    uses: ['Brûlures', 'Coups de soleil', 'Piqûres d\'insectes', 'Cicatrisation'],
+    uses: ['Brûlures', 'Coups de soleil', 'Piq-ûres d\'insectes', 'Cicatrisation'],
     preparation:
       'Extraire le gel frais de la feuille et l\'appliquer directement sur la zone affectée. Peut être consommé en jus pour ses bienfaits internes.',
   },
@@ -60,6 +60,17 @@ export const plants: Plant[] = [
     description: 'Les feuilles d\'eucalyptus sont principalement utilisées pour leurs propriétés décongestionnantes et antiseptiques des voies respiratoires. L\'huile essentielle est très populaire en aromathérapie.',
     uses: ['Toux', 'Rhume', 'Bronchite', 'Sinusite', 'Maux de gorge'],
     preparation: 'En inhalation, verser quelques gouttes d\'huile essentielle dans un bol d\'eau chaude. En infusion, utiliser les feuilles séchées. Ne pas ingérer l\'huile essentielle pure.'
+  },
+  {
+    id: 6,
+    slug: 'curcuma',
+    name: 'Curcuma',
+    scientificName: 'Curcuma longa',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzd76uvLdvVRX_YJfINmCkhJs41IjfbW7sig&s',
+    dataAiHint: 'turmeric root',
+    description: 'Le curcuma est une épice aux puissantes propriétés anti-inflammatoires et antioxydantes, principalement dues à la curcumine. Il est utilisé pour soulager les douleurs articulaires et améliorer la digestion.',
+    uses: ['Arthrite', 'Inflammation', 'Troubles digestifs', 'Antioxydant'],
+    preparation: 'Utilisé en poudre dans la cuisine, ou en infusion. Pour une meilleure absorption, consommer avec du poivre noir.',
   },
 ];
 
