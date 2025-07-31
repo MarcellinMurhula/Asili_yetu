@@ -28,7 +28,7 @@ export const plants: Plant[] = [
     slug: 'artemisia',
     name: 'Artemisia',
     scientificName: 'Artemisia annua',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOKYDlRGggLaWd5JaoghEp0UCk1_64JPWmu86BpAlH2mSjqRlCeP5fiGs&usqp=CAE&s',
     dataAiHint: 'artemisia plant',
     description: 'Une plante herbacée célèbre pour son utilisation dans le traitement du paludisme. Elle a un parfum aromatique distinct.',
     uses: ['Paludisme (Malaria)', 'Fièvre', 'Inflammations'],
