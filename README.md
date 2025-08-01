@@ -1,5 +1,1 @@
-# Firebase Studio
-
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
+Asili yetu est un site web conçu dans #firebase studio dans le cadre du programme Build with AI - Study jam du #GDGoCUCBukavu. Il est un site web répondant aux besoins urgents dans le traitemet de maladie à base de plante médicinales africaines. Il donne les astuces à faire en cas de soucis, il présente des plantes médicinales en détails et donne la possibilité de discuter avec un chatbot intégré de Gemini. Asili yetu replonge l'africain de la région de grands lacs dans sa culture de la nature.
