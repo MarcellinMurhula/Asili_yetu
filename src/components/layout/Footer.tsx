@@ -22,8 +22,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Languages, Leaf } from 'lucide-react';
+import { Languages, Leaf, Loader2 } from 'lucide-react';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -39,6 +40,7 @@ const formSchema = z.object({
 
 export function Footer() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -49,18 +51,40 @@ export function Footer() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values); // In a real app, you would send this to a server
-    toast({
-      title: `Bonjour ${values.name}!`,
-      description: (
-        <p>
-          Merci pour votre message. N'hésitez pas à revisiter notre site pour
-          plus d'informations et des astuces sur la santé.
-        </p>
-      ),
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error('La soumission du formulaire a échoué.');
+      }
+
+      toast({
+        title: `Message reçu, ${values.name}!`,
+        description: (
+          <p>
+            Merci pour votre message. Nous vous répondrons bientôt.
+          </p>
+        ),
+      });
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      toast({
+        variant: 'destructive',
+        title: 'Erreur',
+        description: 'Une erreur est survenue. Veuillez réessayer.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -113,7 +137,10 @@ export function Footer() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full">Envoyer</Button>
+                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                  Envoyer
+                </Button>
               </form>
             </Form>
           </div>
